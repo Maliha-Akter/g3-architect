@@ -1,6 +1,6 @@
 /* work sans from google font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
-
+/* shared style */
 * {
 
     font-family: 'Work Sans', sans-serif;
@@ -15,6 +15,11 @@
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+}
+.description {
+    font-size: 16px;
+    color: #727272;
+    font-weight: 400;
 }
 /* <!-- Header start --> */
 header {
@@ -63,38 +68,16 @@ nav li a {
     color: #131313;
 }
 
-.banner-description {
-    font-size: 16px;
-    color: #424242;
-}
 
 .banner img {
     margin-top: 50px;
     width: 100%;
 }
 
-/* responsive for banner */
-@media screen and (max-width:576px) {
-    header {
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-}
-/* tAblet or medium devices */
-@media screen and (min-width:576px) and (max-width:960px) {
-    header {
-        padding: 50px;
-    }
-    nav{
-        flex-direction: column;
-    }
-}
 /* <!-- Header end --> */
 main{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 /* team section start */
 .team-container{
@@ -112,4 +95,44 @@ main{
 }
 .team-title{
     font-size: 2.5rem;
+}
+
+
+
+
+
+/* responsive for banner */
+@media screen and (max-width:576px) {
+    header {
+        padding: 20px;
+    }
+    nav,
+    .team-container
+    {
+        flex-direction: column;
+    }
+    .team-content{
+        padding: 15px;
+    }
+    .team-img-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+/* tAblet or medium devices */
+@media screen and (min-width:576px) and (max-width:960px) {
+    header {
+        padding: 50px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .team-container
+    {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .team-content{
+        padding: 20px;
+    }
 }
